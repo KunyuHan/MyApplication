@@ -1,11 +1,10 @@
 package com.example.xu.myapplication;
 
 import android.os.Bundle;
-
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 
-import com.ashokvarma.bottomnavigation.BadgeItem;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 
@@ -16,8 +15,8 @@ import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 public class PositionActivity extends AppCompatActivity {
     private BottomNavigationBar bottomNavigationBar;
     private FragmentOne mfragmentOne;
-    private FragmentOne mfragmentTwo;
-    private FragmentOne mfragmentThird;
+    private FragmentTwo mfragmentTwo;
+    private FragmentThree mfragmentThree;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,34 +29,35 @@ public class PositionActivity extends AppCompatActivity {
         bottomNavigationBar.setTabSelectedListener(new BottomNavigationBar.OnTabSelectedListener() {
             @Override
             public void onTabSelected(int position) {
-                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+                FragmentManager fm =getSupportFragmentManager();
+                FragmentTransaction transaction = fm.beginTransaction();
                 switch (position){
                     case 0:{
                         if(mfragmentOne==null){
-                            mfragmentOne = FragmentOne.newInstance("First Fragment");
+                            mfragmentOne =new  FragmentOne();
+
                         }
                         transaction.replace(R.id.id_content,mfragmentOne);
                         break;
                     }
                     case 1:{
                         if(mfragmentTwo==null){
-                            mfragmentTwo = FragmentTwo.newInstance("Second Fragnment");
+                            mfragmentTwo =new FragmentTwo();
                         }
                         transaction.replace(R.id.id_content,mfragmentTwo);
                         break;
                     }
                     case 2:{
-                        if(mfragmentThird==null){
-                            mfragmentThird = FragmentThird.newInstance("Third Fragnment");
+                        if(mfragmentThree==null){
+                            mfragmentThree = new FragmentThree();
                         }
-                        transaction.replace(R.id.id_content,mfragmentThird);
+                        transaction.replace(R.id.id_content,mfragmentThree);
                         break;
                     }
 
                     default:
-                        if(mfragmentOne==null){
-                            mfragmentOne = FragmentOne.newInstance("First Fragment");
-                        }
+                      mfragmentOne = new FragmentOne();
                         transaction.replace(R.id.id_content,mfragmentOne);
                         break;
                 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name"></string>
     <string name="tab_one">首页</string>
     <string name="tab_two">地图</string>
     <string name="tab_three">我</string>

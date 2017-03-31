@@ -13,52 +13,56 @@
         android:layout_marginRight="40dp"
         android:layout_marginTop="80dp"
         android:gravity="center"/>
+
     <RelativeLayout
         android:id="@+id/login_layout"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="150dp"
-        android:paddingTop="15dp"
+        android:gravity="center"
+        android:paddingBottom="20dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
-        android:paddingBottom="20dp">
+        android:paddingTop="15dp">
+
         <FrameLayout
             android:id="@+id/username_layout"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:background="@drawable/selector_register">
+
             <net.steamcrafted.materialiconlib.MaterialIconView
-              xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_margin="5dp"
+                android:visibility="visible"
                 app:materialIcon="account"
                 app:materialIconColor="@color/royalblue"
-                app:materialIconSize="24sp"
-                android:layout_gravity="left|center_vertical"
-                android:visibility="visible"
-                android:layout_margin="5dp"/>
+                app:materialIconSize="24sp"/>
 
             <EditText
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="30dp"
                 android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:maxLength="20"
                 android:paddingLeft="10dp"
-                android:paddingRight="15dp"
-                android:maxLength="20"/>
+                android:paddingRight="15dp"/>
+
             <Button
                 android:id="@+id/bt_username_clear"
                 android:layout_width="23dp"
                 android:layout_height="23dp"
                 android:layout_gravity="right|center_vertical"
                 android:layout_marginRight="10dp"
-                android:visibility="invisible"
-                android:background="@drawable/ic_highlight_off_grey_600_24dp"/>
+                android:background="@drawable/ic_highlight_off_grey_600_24dp"
+                android:visibility="invisible"/>
         </FrameLayout>
 
         <FrameLayout
@@ -67,76 +71,82 @@
             android:layout_height="40dp"
             android:layout_below="@id/username_layout"
             android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:background="@drawable/selector_register">
+            android:background="@drawable/selector_register"
+            android:gravity="center">
+
             <net.steamcrafted.materialiconlib.MaterialIconView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_margin="5dp"
+                android:visibility="visible"
                 app:materialIcon="lock"
                 app:materialIconColor="@color/royalblue"
-                app:materialIconSize="24sp"
-                android:layout_gravity="left|center_vertical"
-                android:visibility="visible"
-                android:layout_margin="5dp"/>
+                app:materialIconSize="24sp"/>
+
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:inputType="textPassword"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="30dp"
                 android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:inputType="textPassword"
+                android:maxLength="20"
                 android:paddingLeft="10dp"
-                android:paddingRight="15dp"
-                android:maxLength="20" />
+                android:paddingRight="15dp"/>
+
             <Button
                 android:id="@+id/bt_pwd_eye"
                 android:layout_width="23dp"
                 android:layout_height="23dp"
-                android:visibility="invisible"
                 android:layout_gravity="right|center_vertical"
                 android:layout_marginRight="40dp"
-                android:background="@drawable/button_visibility_bg"/>
+                android:background="@drawable/button_visibility_bg"
+                android:visibility="invisible"/>
+
             <Button
                 android:id="@+id/bt_pwd_clear"
                 android:layout_width="23dp"
                 android:layout_height="23dp"
                 android:layout_gravity="right|center_vertical"
                 android:layout_marginRight="10dp"
-                android:visibility="invisible"
-                android:background="@drawable/ic_highlight_off_grey_600_24dp" />
+                android:background="@drawable/ic_highlight_off_grey_600_24dp"
+                android:visibility="invisible"/>
         </FrameLayout>
 
         <Button
             android:id="@+id/login"
-            android:text="登录"
-            android:textColor="@color/colorwhite"
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_below="@id/userpwd_layout"
             android:layout_marginTop="30dp"
-            android:background="@color/colorPrimary" />
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/colorwhite"/>
+
         <Button
             android:id="@+id/register"
-            android:text="注册?"
-            android:textSize="14sp"
-            android:background="@color/colorwhite"
-            android:layout_alignRight="@+id/login"
-            android:layout_below="@+id/login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/login_error"
-            android:text="忘记密码"
-            android:textSize="14sp"
-            android:background="@color/colorwhite"
-            android:layout_alignLeft="@id/login"
-            android:layout_below="@id/login"
-            android:gravity="left|center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/login"
+            android:layout_below="@+id/login"
+            android:background="@color/colorwhite"
+            android:text="注册?"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/login_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/login"
+            android:layout_below="@id/login"
+            android:background="@color/colorwhite"
+            android:gravity="left|center_vertical"
+            android:text="忘记密码"
+            android:textSize="14sp"
             android:visibility="visible"/>
     </RelativeLayout>
 
