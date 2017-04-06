@@ -6,26 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-/**
- * Created by xu on 2017/3/24.
- */
 
-public class FragmentOne extends Fragment {
-    //private String[] str = {"AAA55555555","CICU8020416","CICU8020437","CICU8020421","CICU8020400"};
-   // private SimpleAdapter adapter;
-///////////////////////////
-    ////添加的代码段
-    @Override
+
+public class FragmentOne extends Fragment  {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState)
+                             Bundle savedInstanceState)
     {
         return inflater.inflate(R.layout.fragment_one, container, false);
     }
-
-
-    ////////////////////结束
-    ///////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
 }
