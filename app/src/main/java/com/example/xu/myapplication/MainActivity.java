@@ -20,6 +20,6 @@ public class MainActivity extends AppCompatActivity {
                   MainActivity.this.finish();
               }
           };
-          timer.schedule(task,4000);
+          timer.schedule(task,500);
       }
 }

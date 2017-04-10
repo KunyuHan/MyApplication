@@ -1,4 +1,5 @@
 package com.example.xu.myapplication;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,10 +7,9 @@ import android.text.Editable;
 import android.text.InputType;
 import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.view.View;
-import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
     private EditText usernameEditText, passwordEditText;
@@ -95,14 +95,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 passwordEditText.setSelection(passwordEditText.length());
                 break;
             case R.id.login:
+                Intent intent = new Intent();
+                intent.setClass(LoginActivity.this,PositionActivity.class);
+                startActivity(intent);
+
+                /*
                 if(usernameEditText.getText().toString().equals("xu")&&passwordEditText.getText().toString().equals("123")){
                     Toast.makeText(getApplicationContext(),"登录成功",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent();
-                    intent.setClass(LoginActivity.this,PositionActivity.class);
-                    startActivity(intent);
+
                 }else {
                     Toast.makeText(getApplicationContext(),"登录失败",Toast.LENGTH_LONG).show();
-                }
+                }*/
                 break;
             case R.id.login_error:
                 break;
